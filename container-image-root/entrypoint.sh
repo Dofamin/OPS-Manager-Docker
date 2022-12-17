@@ -19,6 +19,9 @@ service cron start
 if [ "$1" == "" ];
 then
 bin/mongodb-mms start
+while true ; do
+    sleep 1000
+done
 else
 exec "$1"
 fi
